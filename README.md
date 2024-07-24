@@ -1,33 +1,47 @@
-# Guide: V4 AIO Cooking at Burthope
+```md
+# V4 Angler Fishing
 
-## Introduction
-Welcome to the V4 AIO Cooking script guide! This script allows you to cook all types of fish in the game at the cooking spot in Burthope. Whether you want to cook sharks, anglerfish, manta rays, sea turtles, dark crabs, monkfish, swordfish, lobsters, tuna, trout, salmon, herring, or sardine this script has got you covered.
+## Guide
+1. Copy the provided Java code into your code editor.
+2. Save the file with an appropriate name.
+3. Make sure if you're using a fish barrel, it's in the first inventory slot of your inventory.
+4. Wear a Dragon Harpoon.
+5. Wear a Lightbearer Ring (optional, but recommended).
+6. Get your Fishing Rod and Sandworm.
 
-## Instructions:
-1. Select the desired food to cook:
-   - Set `decision_raw_food` to the corresponding value based on the list below:
-     - 0: Shark
-     - 1: Anglerfish
-     - 2: Manta ray
-     - 3: Sea turtle
-     - 4: Dark crab
-     - 5: Monkfish
-     - 6: Swordfish
-     - 7: Lobster
-     - 8: Tuna
-     - 9: Trout
-     - 10: Salmon
-     - 11: Herring
-     - 12: Sardine
+### Usage
+1. Start the script in front of the Angler fishing spots (not the bank unless you stand at a specific spot in front of the deposit box).
+2. Ensure you have the necessary items and equipment equipped for fishing.
+3. The script will perform the following actions:
 
-2. Start the script with the necessary raw fish in your inventory or empty at the bank
-3. The script will automatically cook the selected fish at the cooking spot in Burthope.
-4. If your cooking level increases while cooking, the script will automatically bank your items and deposit them back after and restart cooking.
-5. The script will continue cooking until you manually stop it.
+   - Use special attack if enough special energy is available.
+   - Enable running if the player's energy is full.
+   - Bait the fishing spot if the inventory is not full and the player is not moving.
+   - Open the fish barrel if it is in the inventory and it is detected as closed.
+   - Move and deposit items in the bank if the inventory is full and the player is not moving.
+   - Empty your fish barrel if it is detected.
+   - Walk to the fishing spot if the inventory is not full and the player is at the fish deposit location (aka in front of the deposit box).
 
-## Warning
-If your raw food runs out, the script will wait in your bank and keep depositing and withdrawing.
+---
 
-**Note**: Ensure you have the required cooking level to cook the selected fish.
+**Note**: The script will auto detect if you have a fish barrel, so don't worry about that! However, make sure it's in your 1st inventory slot due to the deposit box item slot area coordination on the screen. The main reason we are using the deposit box here is because we don't want to deal with a bank pin; this way, it's easier for you to use.
 
-Enjoy your efficient and automated cooking experience with the V4 AIO Cooking script!
+Please ensure that you understand the code and its implications before implementing it in Vswitcher.
+```
+
+```md
+# Update Log - Angler Fishing Script
+
+## Version 1.1 - 6/27/2023
+- Can now detect if you have dragon harpoon and then spec, for skillers so you don't have to disable the code
+- Implemented randomization human movement from fishing spot to deposit bank and opposite.
+- Added && Enhanced the login process for more reliable script execution, so you can fish longer incase you dc or something happens.
+
+## Version 1.0 - — 06/17/2023
+- First Release
+- Added support for using special attack if available.
+- Improved energy management by enabling running when energy is above a certain threshold.
+- Optimized fishing logic by checking for animation and inventory space before baiting the fishing spot.
+- Implemented the ability to open the fish barrel if closed and deposit fish if the inventory is full.
+
+```
